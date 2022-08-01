@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_01_181409) do
   create_table "trades", force: :cascade do |t|
     t.integer "author_id"
     t.string "name"
-    t.decimal "amount"
+    t.decimal "amount", precision: 12, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
