@@ -20,6 +20,11 @@ body {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0 !important;
+  margin: 0 !important; 
+}
+
 .bg-blue {
   background-color: #3778c2;
 }
@@ -34,4 +39,9 @@ body {
 
 .bg-main {
   background: #ebecec;
+}
+
+.icon-image {
+  width: 35px;
+  height: 35px;
 }

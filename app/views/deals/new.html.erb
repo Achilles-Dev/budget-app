@@ -1,0 +1,17 @@
+<%= form_with(model: @deal, url: category_deals_path) do |form| %>
+  <div class='d-flex justify-content-between align-items-center px-2 py-2 bg-blue'>
+    <a href="<%= url_for(:categories) %>">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left text-white" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+    </a>
+    <h3 class="my-0 text-white">Add New Deal</h3>
+    <%= form.submit "Save", class: "text-white border-0 bg-blue"%>
+  </div>
+  <div class="d-flex flex-column mt-4 bg-white">
+    <%= form.text_field :name, class: "form-control border-0 border-top mt-0 py-2", placeholder: "Transaction item" %>
+    <%= form.number_field :amount, step: 0.01, placeholder: 'Amount', min: 0, class: "form-control border-0 border-top mt-0 py-2" %>
+    <%= form.collection_select :category, @categories, :id, :name, { include_blank: true }, { multiple: true } %>
+    </div>
+  </div>
+<% end %>

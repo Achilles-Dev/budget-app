@@ -11,7 +11,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-main">
+  <body class="bg-main min-vh-100">
+    <% unless "home/index"%>
+      <%= render "layouts/messages"%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
