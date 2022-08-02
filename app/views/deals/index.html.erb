@@ -13,17 +13,17 @@
     <% amount = @category.deals.reduce(0) do |total, deal| %>
       <% total + (deal[:amount]) %>
     <% end %>
-    <p>$<%= amount %></p>
+    <h3 class="text-dark">$<%= amount %></h3>
   </div>
 </div>
 <div class="mt-3">
   <% @deals.each do |deal| %>
-    <div class="card d-flex flex-row justify-content-between py-3 px-2 align-items-center">
+    <div class="card py-3 mx-2">
       <div class="d-flex flex-row justify-content-between px-2 gap-3 align-items-center">  
         <h3><%= deal.name %></h3>
+        <h3 class="text-dark">$<%= deal.amount %></h3>
       </div>
     </div>
-    <div>
   <% end %>
   <%= link_to 'Add a new deal', new_category_deal_path, class: 'btn btn-primary py-2 mt-3 d-flex justify-content-center' %>
 </div>

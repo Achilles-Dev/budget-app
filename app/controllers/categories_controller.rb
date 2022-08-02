@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :set_user
 
   def index
-    @categories = Category.all
+    @categories = Category.includes(:deals).all
   end
 
   def new
