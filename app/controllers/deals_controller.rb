@@ -34,10 +34,6 @@ class DealsController < ApplicationController
     end
   end
 
-  def show
-    @deal = Deal.find(params[:id])
-  end
-
   def destroy
     deal = deal.find(params[:id])
     deal.destroy
