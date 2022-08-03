@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
- @font-face {
-	font-family: 'proxima-nova-bold';
-	src: url("app/assets/Proxima-Nova-Bold.ttf");
+@font-face {
+  font-family: 'proxima-nova-bold';
+  src: url("app/assets/Proxima-Nova-Bold.ttf");
 }
 
 body {
