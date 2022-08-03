@@ -1,0 +1,30 @@
+example_id                                      | status | run_time        |
+----------------------------------------------- | ------ | --------------- |
+./spec/models/category_deal_spec.rb[1:1]        | passed | 0.00233 seconds |
+./spec/models/category_deal_spec.rb[1:2]        | passed | 0.00219 seconds |
+./spec/models/category_spec.rb[1:1]             | passed | 0.00186 seconds |
+./spec/models/category_spec.rb[1:2]             | passed | 0.00256 seconds |
+./spec/models/deal_spec.rb[1:1]                 | passed | 0.00168 seconds |
+./spec/models/deal_spec.rb[1:2]                 | passed | 0.00252 seconds |
+./spec/models/deal_spec.rb[1:3]                 | passed | 0.00191 seconds |
+./spec/models/deal_spec.rb[1:4]                 | passed | 0.00261 seconds |
+./spec/models/deal_spec.rb[1:5]                 | passed | 0.0029 seconds  |
+./spec/models/user_spec.rb[1:1]                 | passed | 0.01062 seconds |
+./spec/models/user_spec.rb[1:2]                 | passed | 0.04155 seconds |
+./spec/views/categories_index_page_spec.rb[1:1] | passed | 0.06145 seconds |
+./spec/views/categories_index_page_spec.rb[1:2] | passed | 0.06203 seconds |
+./spec/views/categories_index_page_spec.rb[1:3] | passed | 0.06291 seconds |
+./spec/views/categories_index_page_spec.rb[1:4] | passed | 0.08065 seconds |
+./spec/views/categories_index_page_spec.rb[1:5] | passed | 0.18977 seconds |
+./spec/views/category_deals_page_spec.rb[1:1]   | passed | 0.06937 seconds |
+./spec/views/category_deals_page_spec.rb[1:2]   | passed | 0.07992 seconds |
+./spec/views/category_deals_page_spec.rb[1:3]   | passed | 0.09333 seconds |
+./spec/views/category_deals_page_spec.rb[1:4]   | passed | 0.12111 seconds |
+./spec/views/login_page_spec.rb[1:1]            | passed | 0.02707 seconds |
+./spec/views/login_page_spec.rb[1:2]            | passed | 6.52 seconds    |
+./spec/views/login_page_spec.rb[1:3]            | passed | 0.05554 seconds |
+./spec/views/root_page_spec.rb[1:1]             | passed | 0.0142 seconds  |
+./spec/views/root_page_spec.rb[1:2]             | passed | 0.02026 seconds |
+./spec/views/root_page_spec.rb[1:3]             | passed | 0.02337 seconds |
+./spec/views/root_page_spec.rb[1:4]             | passed | 0.02583 seconds |
+./spec/views/root_page_spec.rb[1:5]             | passed | 0.03532 seconds |
