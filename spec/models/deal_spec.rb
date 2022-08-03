@@ -2,11 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Deal, type: :model do
   user = User.new(name: 'Solo', email: 'dealuser@user.com', password: '123456')
-  subject do
-    Deal.new(name: 'Bread', amount: 10.0, author: user)
-  end
-
-  before { subject.save }
+  subject = Deal.new(name: 'Bread', amount: 10.0, author: user)
+  subject.save
 
   it 'name must not be blank' do
     subject.name = nil
