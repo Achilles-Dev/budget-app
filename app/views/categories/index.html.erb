@@ -11,14 +11,11 @@
   <% @categories.each do |category| %>
     <div class="card d-flex flex-row justify-content-between mx-2 py-3 px-2 align-items-center">
       <div class="d-flex flex-row justify-content-between px-2 gap-3 align-items-center">
-        <img class="icon-image" src=<%= category.icon%> alt="Icon">  
+        <img class="icon-image" src=<%= category.icon %> alt="Icon">  
         <h3><%= link_to category.name, category_deals_path(category) %></h3>
       </div>
       <div class="float-end text-dark">
-        <% amount = category.deals.reduce(0) do |total, deal| %>
-          <% total + (deal[:amount]) %>
-        <% end %>
-        <h3>$<%= amount %></h3>
+        <h3>$<%= category.total_amount %></h3>
       </div>
     </div>
     <div>
