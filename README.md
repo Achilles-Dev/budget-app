@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Budget App
+# Money Manager
 
-> The **Budget App** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> The **Money Manager** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent for that category and on what.
 
 
 ## Built With
@@ -50,9 +50,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Run tests
 
-### Deployment
-
-
+- Run ```rspec``` to run tests
 
 ## Authors
 
@@ -74,9 +72,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for the original design idea.
 
 ## 📝 License
 
