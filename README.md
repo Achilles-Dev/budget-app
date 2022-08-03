@@ -15,9 +15,9 @@
 - Rspec
 - Capybara
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Money Manager](https://money-manager-achilles.herokuapp.com/)
 
 To get a local copy up and running follow these simple example steps.
 
