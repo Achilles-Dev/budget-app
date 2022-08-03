@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+  font-family: 'proxima-nova-bold';
+  src: url("app/assets/Proxima-Nova-Bold.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'proxima-nova-bold', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.bg-blue {
+  background-color: #3778c2;
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+.dark {
+  color: #8f98a1;
+}
+
+.bg-main {
+  background: #ebecec;
+}
+
+.icon-image {
+  width: 50px;
+  height: 50px;
+}
+
+input,
+input::placeholder {
+  font-family: 'proxima-nova-bold', sans-serif !important;
+  font-size: 20px;
+}

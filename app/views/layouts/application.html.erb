@@ -7,10 +7,14 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-main min-vh-100 dark">
+    <% unless "home/index"%>
+      <%= render "layouts/messages"%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
