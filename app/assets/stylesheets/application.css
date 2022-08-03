@@ -56,3 +56,9 @@ p {
   width: 50px;
   height: 50px;
 }
+
+input,
+input::placeholder {
+  font-family: 'proxima-nova-bold', sans-serif !important;
+  font-size: 20px;
+}
