@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face {
+  font-family: 'proxima-nova-bold';
+  src: url("app/assets/Proxima-Nova-Bold.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'proxima-nova-bold', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.bg-blue {
+  background-color: #3778c2;
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+.dark {
+  color: #8f98a1;
+}
+
+.bg-main {
+  background: #ebecec;
+}
+
+.icon-image {
+  width: 50px;
+  height: 50px;
+}
+
+input,
+input::placeholder {
+  font-family: 'proxima-nova-bold', sans-serif !important;
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px !important;
+}
+
+a {
+  font-size: 24px !important;
+}

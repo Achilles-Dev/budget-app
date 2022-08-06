@@ -1,0 +1,9 @@
+<%= form_with(model: @deal, url: category_deals_path) do |form| %>
+  <%= render "layouts/navbar", header: "Add New Deal", right_nav: "deals/new", form: form %>
+  <div class="d-flex flex-column mt-4 bg-white">
+    <%= form.text_field :name, class: "form-control border-0 border-top mt-0 py-2", placeholder: "Transaction item" %>
+    <%= form.number_field :amount, step: 0.01, placeholder: 'Amount', min: 0, class: "form-control border-0 border-top mt-0 py-2" %>
+    <%= form.collection_select :category, @categories, :id, :name, { include_blank: true }, { multiple: true } %>
+    </div>
+  </div>
+<% end %>
