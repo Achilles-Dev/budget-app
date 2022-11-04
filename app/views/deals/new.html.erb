@@ -1,5 +1,6 @@
 <%= form_with(model: @deal, url: category_deals_path) do |form| %>
   <%= render "layouts/navbar", header: "Add New Deal", right_nav: "deals/new", form: form %>
+  <%= render "layouts/messages"%>
   <div class="d-flex flex-column mt-4 gap-3">
     <%= form.text_field :name, class: "form-control border-0 border-top mt-0 py-3", placeholder: "Transaction item" %>
     <%= form.number_field :amount, step: 0.01, placeholder: 'Amount', min: 0, class: "form-control border-0 border-top mt-0 py-3 h4" %>

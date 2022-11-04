@@ -12,9 +12,6 @@
   </head>
 
   <body class="bg-main min-vh-100 dark">
-    <% unless "home/index"%>
-      <%= render "layouts/messages"%>
-    <% end %>
     <%= yield %>
   </body>
 </html>
