@@ -30,10 +30,10 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 - Clone the Repository
-`git clone https://github.com/Achilles-Dev/recipe-app.git`
+`git clone https://github.com/Achilles-Dev/budget-app.git`
 
 - Go to the project directory
-`cd recipe-app`
+`cd budget-app`
 
 - Run ```bundle install```
 - Run ```rails db:create```
