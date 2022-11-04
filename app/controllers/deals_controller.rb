@@ -17,20 +17,29 @@ class DealsController < ApplicationController
     respond_to do |format|
       format.html do
         if deal.save
-          flash[:success] = 'New Deal added'
-          categories = params[:deal][:category].map { |cat| Category.find(cat) unless cat.empty? }
-          categories.each do |category|
-            next if category.nil?
-
-            cat_deal = CategoryDeal.new(category:, deal:)
-            flash[:success] = 'New CategoryDeal added' if cat_deal.save
-          end
-          redirect_to category_deals_path
+          categories = params[:deal][:category].reject!(&:empty?)
+          add_category_deal(categories, deal)
         else
-          flash.now[:error] = 'Error: Deal could not be added'
-          render :new
+          flash[:error] = 'Error: Deal could not be added'
+          redirect_to new_category_deal_path
         end
       end
+    end
+  end
+
+  def add_category_deal(categories, deal)
+    if categories.empty?
+      deal.destroy
+      flash[:error] = 'Error: Category not selected! Select a category'
+      redirect_to new_category_deal_path
+    else
+      categories.each do |category|
+        next if category.nil?
+
+        cat_deal = CategoryDeal.new(category:, deal:)
+        flash[:success] = 'New CategoryDeal added' if cat_deal.save
+      end
+      redirect_to category_deals_path
     end
   end
 
