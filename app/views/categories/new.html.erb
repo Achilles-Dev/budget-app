@@ -1,9 +1,9 @@
 <%= form_with(model: @category, url: categories_path) do |form| %>
   <%= render "layouts/navbar", header: "Add New Category", right_nav: "categories/new", form: form %>
   <%= render "layouts/messages"%>
-  <div class="d-flex flex-column mt-4 bg-white">
-    <%= form.text_field :name, class: "form-control border-0 border-top mt-0 py-3", placeholder: "Category name" %>
-    <%= form.text_field :icon, class: "form-control border-0 border-top mt-0 py-3", placeholder: "URL for icon" %>
+  <div class="d-flex flex-column mt-4 gap-2">
+    <%= form.text_field :name, class: "form-control border-0 border-top mt-0 py-3 input-lg", placeholder: "Category name" %>
+    <%= form.text_field :icon, class: "form-control border-0 border-top mt-0 py-3 text-danger", placeholder: "URL for icon" %>
     </div>
   </div>
 <% end %>
