@@ -18,6 +18,7 @@ class DealsController < ApplicationController
       format.html do
         if deal.save
           categories = params[:deal][:category].reject!(&:empty?)
+          categories = categories.map { |cat| Category.find(cat) }
           add_category_deal(categories, deal)
         else
           flash[:error] = 'Error: Deal could not be added'
@@ -34,8 +35,6 @@ class DealsController < ApplicationController
       redirect_to new_category_deal_path
     else
       categories.each do |category|
-        next if category.nil?
-
         cat_deal = CategoryDeal.new(category:, deal:)
         flash[:success] = 'New CategoryDeal added' if cat_deal.save
       end
