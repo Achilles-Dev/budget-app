@@ -18,8 +18,8 @@ class CategoriesController < ApplicationController
           flash[:success] = 'New Category added'
           redirect_to categories_path
         else
-          flash.now[:error] = 'Error: Category could not be added'
-          render :new
+          flash[:error] = 'Error: Category could not be added'
+          redirect_to new_category_path
         end
       end
     end

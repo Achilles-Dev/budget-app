@@ -9,10 +9,10 @@
   </div>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="d-flex flex-column mt-4 bg-white">
+  <div class="d-flex flex-column mt-4 gap-2">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control border-0 border-top mt-0 py-3", placeholder: "Email" %>
     <div class="actions">
-      <%= f.submit "Send me reset password instructions", class: "form-control btn btn-primary py-2" %>
+      <%= f.submit "Send me reset password instructions", class: "form-control btn btn-primary py-3" %>
     </div>
   </div>
 <% end %>
