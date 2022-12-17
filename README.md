@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Money Manager](https://money-manager-achilles.herokuapp.com/)
+[Live Money Manager](https://money-manager-achilles.onrender.com)
 
 To get a local copy up and running follow these simple example steps.
 
