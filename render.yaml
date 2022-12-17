@@ -4,18 +4,18 @@
 services:
   - type: web # valid values: https://render.com/docs/yaml-spec#type
     name: money-manager-achilles
-    env: docker # valid values: https://render.com/docs/yaml-spec#environment
-    dockerfilePath: Dockerfile.render
+    env: ruby # valid values: https://render.com/docs/yaml-spec#environment
+    buildCommand: bin/render-build.sh
+    startCommand: bundle exec puma -C config/puma.rb
     plan: free # optional; defaults to starter
     envVars:
-      - key: LANG # Imported from Heroku app
-        value: en_US.UTF-8
-      - key: RACK_ENV # Imported from Heroku app
-        value: production
-      - key: RAILS_ENV # Imported from Heroku app
-        value: production
-      - key: RAILS_LOG_TO_STDOUT # Imported from Heroku app
-        value: enabled
-      - key: RAILS_SERVE_STATIC_FILES # Imported from Heroku app
-        value: enabled
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: DATABASE_URL # Render PostgreSQL database
+        fromDatabase:
+          name: postgresql-trapezoidal-22270
+          property: connectionString
 
+databases: # Render PostgreSQL database
+  - name: postgresql-trapezoidal-22270
+    ipAllowList: [] # only allow internal connections
